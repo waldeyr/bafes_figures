@@ -60,7 +60,7 @@ genera_plot <- ggplot(genera_df, aes(x = reorder(Genera, Number), y = Number, fi
   ) +  
   scale_fill_manual(values = my_palette) + 
   theme_minimal() +
-  labs(title = "A", subtitle = "Genera level (238  SDF strains)")+
+  labs(title = "A", subtitle = "Genus level (238  SDF strains)")+
   theme(
     legend.position = "none",
     # legend.position = c(1, .95),
@@ -73,8 +73,8 @@ genera_plot <- ggplot(genera_df, aes(x = reorder(Genera, Number), y = Number, fi
     axis.text.y = element_blank(),          
     axis.text.x = element_blank(), 
     #axis.ticks = element_blank(),
-    plot.title = element_text(hjust = 0.5, face = "italic"),
-    plot.subtitle = element_text(hjust = 0.5, face = "italic")
+    plot.title = element_text(size=32, hjust=0, face = "bold.italic"),
+    plot.subtitle = element_text(size=16, hjust=0, face = "bold.italic")
   )
 
 ######################################################
@@ -115,8 +115,8 @@ species_plot <- ggplot(species_df, aes(x = as.factor(id), y = Number, fill = Gen
     axis.text = element_blank(),
     axis.title = element_blank(),
     panel.grid = element_blank(),
-    plot.title = element_text(hjust=0.5, face = "italic"),
-    plot.subtitle = element_text(hjust=0.5, face = "italic"),
+    plot.title = element_text(size=32, hjust=0, face = "bold.italic"),
+    plot.subtitle = element_text(size=16, hjust=0, face = "bold.italic"),
     panel.spacing = unit(-1, "lines")
   )
 ####################################################
